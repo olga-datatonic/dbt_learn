@@ -6,7 +6,7 @@ config-version: 2
 profile: 'jaffle_shop'
 
 model-paths: ["models"]
-analysis-paths: ["analyses"]
+analysis-paths: ["analyses1"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
@@ -19,4 +19,9 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   jaffle_shop:
-    +materialized: table
+    marts:
+      core:
+        +materialized: table
+    staging:
+       +materialized: view
+    
