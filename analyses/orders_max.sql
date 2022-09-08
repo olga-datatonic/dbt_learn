@@ -7,7 +7,7 @@ select
 status,
 count(order_id) as number_of_orders
 from orders
-order by 1
+group by 1
 )
 
 select * from aggregated
