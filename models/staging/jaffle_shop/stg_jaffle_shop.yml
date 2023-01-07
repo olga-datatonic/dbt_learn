@@ -11,8 +11,8 @@ models:
           - unique
           - not_null
           - relationships
-            to: ref('stg_orders')
-            field: customer_id
+              to: ref('stg_orders')
+              field: customer_id
 
   - name: stg_orders
     description: Staged order data from our jaffle shop app.
